@@ -2,13 +2,9 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
-import { site } from './src/config/site.ts';
-
-const base = process.env.SITE_BASE || '/';
 
 export default defineConfig({
-  site: site.url,
-  base,
+  site: 'https://github.io',
   output: 'static',
   integrations: [
     icon(),

@@ -2,9 +2,9 @@ import { expect, it } from 'vitest';
 import { site, parseSite, resolveSiteUrl } from './site';
 
 it('provides replaceable product identity', () => {
-  expect(site.name).toBe('Noir CLI');
-  expect(site.repository).toBe('https://github.com/nandomoreirame/terminalnoir-astro-theme');
-  expect(site.url).toBe('https://example.com');
+  expect(site.name).toBe('Wardah Tri Masayu');
+  expect(site.repository).toBe('https://github.com/wardahtrimasayu/wardahtrimasayu.github.io');
+  expect(site.url).toBe('https://wardahtrimasayu.github.io');
   expect(site.install[0].command).toContain('example');
 });
 

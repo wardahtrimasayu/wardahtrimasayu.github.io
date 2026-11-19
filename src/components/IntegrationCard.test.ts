@@ -1,5 +1,6 @@
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import { expect, it } from 'vitest';
+import { ui } from '../i18n/ui';
 import Integrations from '../views/Integrations.astro';
 import Detail from '../views/IntegrationDetail.astro';
 import Card from './IntegrationCard.astro';
@@ -34,6 +35,6 @@ it('omits the screenshot when the integration has none', async () => {
 it('announces an empty catalogue', async () => {
   const container = await AstroContainer.create();
   const html = await container.renderToString(Integrations, { props: { items: [] } });
-  expect(html).toContain('No example integrations yet.');
+  expect(html).toContain(ui.en['integrations.empty']);
   expect(html).not.toContain('/ports/');
 });
