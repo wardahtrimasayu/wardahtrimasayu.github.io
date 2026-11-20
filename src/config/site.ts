@@ -55,7 +55,7 @@ export const site = parseSite({
     en: {
       header: { label: 'Mulai', href: '/docs' },
       hero: {
-        primary: { label: 'Tentang Saya', href: '/docs' },
+        primary: { label: 'Tentang Saya', href: '/about' },
         secondary: { label: 'Proyek Saya', href: '/integrations' },
       },
       box: {
@@ -63,7 +63,7 @@ export const site = parseSite({
         title: 'Halo! Selamat datang di ruang digital saya.',
         body: 'Saya Wardah Tri Masayu, mahasiswa yang antusias mempelajari pemrograman dan pengembangan web.',
         primary: { label: 'Repositori Github', href: 'repository' },
-        secondary: { label: 'Lihat Profil', href: '/docs' },
+        secondary: { label: 'Lihat Keahlian', href: '/docs' },
       },
     },
     'pt-br': {
