@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+---
+
+<Layout title="Kalkulator Statistika" description="Kalkulator Statistika Dasar Interaktif">
+  <Section>
+    <SectionHeader
+      eyebrow="Alat Bantu Analisis"
+      title="Kalkulator Statistika Dasar"
+      description="Masukkan deret angka yang dipisahkan koma untuk menghitung Mean, Median, Minimum, Maksimum, dan Rentang."
+    />
+
+    <div class="max-w-2xl space-y-6">
+      <div class="p-6 rounded border space-y-4">
+        <div>
+          <label for="dataInput" class="block text-sm font-medium mb-2">
+            Masukkan Data Angka (pisahkan dengan koma)
+          </label>
+          <input
+            id="dataInput"
+            type="text"
+            value="80, 85, 90, 75, 95"
+            class="w-full p-2.5 rounded border bg-transparent"
+            placeholder="Contoh: 70, 82, 88, 91, 79"
+          />
+        </div>
+
+        <button
+          id="hitungBtn"
+          type="button"
+          class="px-4 py-2 rounded border font-medium"
+        >
+          Hitung Statistik
+        </button>
+
+        <div id="hasilBox" class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+          <div class="p-3 rounded border">
+            <p class="text-xs text-muted">Jumlah Data (n)</p>
+            <p id="resCount" class="text-lg font-bold">5</p>
+          </div>
+          <div class="p-3 rounded border">
+            <p class="text-xs text-muted">Rata-rata (Mean)</p>
+            <p id="resMean" class="text-lg font-bold">85.00</p>
+          </div>
+          <div class="p-3 rounded border">
+            <p class="text-xs text-muted">Nilai Tengah (Median)</p>
+            <p id="resMedian" class="text-lg font-bold">85.00</p>
+          </div>
+          <div class="p-3 rounded border">
+            <p class="text-xs text-muted">Minimum</p>
+            <p id="resMin" class="text-lg font-bold">75</p>
+          </div>
+          <div class="p-3 rounded border">
+            <p class="text-xs text-muted">Maksimum</p>
+            <p id="resMax" class="text-lg font-bold">95</p>
+          </div>
+          <div class="p-3 rounded border">
+            <p class="text-xs text-muted">Rentang (Range)</p>
+            <p id="resRange" class="text-lg font-bold">20</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+</Layout>
+
+<script is:inline>
+  document.getElementById('hitungBtn')?.addEventListener('click', function () {
+    const raw = document.getElementById('dataInput').value;
+    const nums = raw
+      .split(',')
+      .map((s) => parseFloat(s.trim()))
+      .filter((n) => !isNaN(n))
+      .sort((a, b) => a - b);
+
+    if (nums.length === 0) {
+      alert('Masukkan minimal satu angka yang valid, dipisahkan koma.');
+      return;
+    }
+
+    const n = nums.length;
+    const sum = nums.reduce((acc, v) => acc + v, 0);
+    const mean = sum / n;
+    const mid = Math.floor(n / 2);
+    const median = n % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+    const min = nums[0];
+    const max = nums[n - 1];
+    const range = max - min;
+
+    document.getElementById('resCount').textContent = n;
+    document.getElementById('resMean').textContent = mean.toFixed(2);
+    document.getElementById('resMedian').textContent = median.toFixed(2);
+    document.getElementById('resMin').textContent = min;
+    document.getElementById('resMax').textContent = max;
+    document.getElementById('resRange').textContent = range;
+  });
+</script>

@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+const dataStatistik = [
+  { label: 'Statistika Deskriptif', nilai: 88 },
+  { label: 'Pengolahan Excel', nilai: 92 },
+  { label: 'Komputasi Python', nilai: 85 },
+  { label: 'Analisis Regresi', nilai: 80 },
+  { label: 'Visualisasi Data', nilai: 90 },
+];
+---
+
+<Layout title="Visualisasi Data" description="Grafik dan Analisis Data Statistika">
+  <Section>
+    <SectionHeader
+      eyebrow="Statistika & Analisis"
+      title="Visualisasi Data"
+      description="Contoh penyajian grafik interaktif dari hasil pengolahan data statistika."
+    />
+
+    <div class="max-w-3xl space-y-6">
+      <div class="p-6 rounded border">
+        <h3 class="font-bold text-lg mb-2">Distribusi Nilai Tugas & Praktikum Komputasi</h3>
+        <p class="text-sm text-muted mb-6">
+          Perbandingan rata-rata capaian analisis data menggunakan Excel, Python, dan Statistika Dasar (%).
+        </p>
+
+        <div class="space-y-4">
+          {dataStatistik.map((item) => (
+            <div class="space-y-1">
+              <div class="flex justify-between text-sm">
+                <span>{item.label}</span>
+                <span class="font-bold">{item.nilai}%</span>
+              </div>
+              <div class="w-full h-4 rounded border overflow-hidden">
+                <div
+                  style={`width: ${item.nilai}%; background-color: #a78bfa; height: 100%; transition: width 0.5s ease;`}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Section>
+</Layout>

@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+const artikelBlog = [
+  {
+    judul: 'Mengenal Statistika Deskriptif dalam Analisis Data Awal',
+    tanggal: '18 November 2026',
+    kategori: 'Statistika',
+    ringkasan: 'Statistika deskriptif membantu merangkum data mentah menjadi informasi yang mudah dipahami melalui ukuran pemusatan (mean, median, modus) dan ukuran penyebaran (varians, standar deviasi).',
+    isi: 'Sebelum melakukan pemodelan atau uji hipotesis yang kompleks, seorang analis data wajib memahami karakteristik dasar datanya. Dengan menghitung rata-rata, nilai tengah, serta melihat sebaran data menggunakan tabel frekuensi atau grafik batang, kita dapat mendeteksi nilai ekstrem (outlier) dan pola distribusi sejak awal.'
+  },
+  {
+    judul: 'Tips Praktis Mengolah Data Terstruktur dengan Microsoft Excel',
+    tanggal: '20 November 2026',
+    kategori: 'Komputasi Data',
+    ringkasan: 'Pemanfaatan fungsi dasar seperti AVERAGE, STDEV.S, COUNTIF, dan Pivot Table untuk mempercepat rekapitulasi data kuliah maupun penelitian.',
+    isi: 'Microsoft Excel tetap menjadi salah satu perangkat lunak paling efisien untuk pembersihan dan eksplorasi data skala kecil hingga menengah. Menggunakan fitur filter, validasi data, serta grafik ringkasan membantu meminimalkan kesalahan input dan mempercepat penyajian laporan analisis secara visual.'
+  }
+];
+---
+
+<Layout title="Blog & Catatan" description="Tulisan dan catatan seputar statistika dan analisis data">
+  <Section>
+    <SectionHeader
+      eyebrow="Tulisan & Catatan"
+      title="Blog Statistika"
+      description="Kumpulan catatan kuliah, ringkasan konsep statistika, dan pengalaman belajar analisis data."
+    />
+
+    <div class="max-w-3xl space-y-6">
+      {artikelBlog.map((item) => (
+        <article class="p-6 rounded border space-y-3">
+          <div class="flex flex-wrap items-center gap-3 text-xs text-muted">
+            <span class="px-2 py-1 rounded border">{item.kategori}</span>
+            <span>{item.tanggal}</span>
+          </div>
+          <h2 class="text-xl font-bold">{item.judul}</h2>
+          <p class="font-medium text-sm">{item.ringkasan}</p>
+          <p class="text-sm text-muted leading-relaxed">{item.isi}</p>
+        </article>
+      ))}
+    </div>
+  </Section>
+</Layout>

@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+const ringkasanGithub = [
+  { label: 'Repositori Publik', nilai: '3+', keterangan: 'Portofolio & Tugas Statistika' },
+  { label: 'Teknologi Utama', nilai: 'Astro & Python', keterangan: 'Web & Komputasi Data' },
+  { label: 'Status Akun', nilai: 'Aktif', keterangan: '@wardahtrimasayu' },
+];
+
+const bahasaTeratas = [
+  { nama: 'Astro / HTML / CSS', persen: 55 },
+  { nama: 'TypeScript / JavaScript', persen: 25 },
+  { nama: 'Python (Analisis Data)', persen: 20 },
+];
+---
+
+<Layout title="Statistik GitHub" description="Statistik aktivitas dan repositori GitHub Wardah Tri Masayu">
+  <Section>
+    <SectionHeader
+      eyebrow="Aktivitas Kode"
+      title="Statistik GitHub"
+      description="Ringkasan kontribusi, repositori, dan bahasa pemrograman dari akun GitHub saya."
+    />
+
+    <div class="max-w-3xl space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {ringkasanGithub.map((item) => (
+          <div class="p-5 rounded border space-y-1">
+            <p class="text-xs text-muted">{item.label}</p>
+            <p class="text-2xl font-bold">{item.nilai}</p>
+            <p class="text-xs text-muted">{item.keterangan}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="p-6 rounded border space-y-4">
+        <h3 class="font-bold text-lg">Distribusi Bahasa & Teknologi di Repositori</h3>
+        <div class="space-y-3">
+          {bahasaTeratas.map((lang) => (
+            <div class="space-y-1">
+              <div class="flex justify-between text-sm">
+                <span>{lang.nama}</span>
+                <span class="font-bold">{lang.persen}%</span>
+              </div>
+              <div class="w-full h-3 rounded border overflow-hidden">
+                <div
+                  style={`width: ${lang.persen}%; background-color: #a78bfa; height: 100%;`}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="p-4 rounded border text-sm text-muted flex flex-wrap items-center justify-between gap-4">
+        <span>Ingin melihat kode sumber lengkap proyek saya?</span>
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 rounded border font-medium"
+        >
+          Kunjungi Profil GitHub →
+        </a>
+      </div>
+    </div>
+  </Section>
+</Layout>

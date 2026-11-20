@@ -86,6 +86,11 @@ export const site = parseSite({
     { href: '/about', key: 'nav.about' },
     { href: '/integrations', key: 'nav.integrations' },
     { href: '/docs', key: 'nav.docs' },
+    { href: '/contact', key: 'nav.contact' },
+    { href: '/visualisasi', key: 'nav.chart' },
+    { href: '/blog', key: 'nav.blog' },
+    { href: '/statistik', key: 'nav.stats' },
+    { href: '/kalkulator', key: 'nav.calc' },
   ],
   hero: {
     en: {
