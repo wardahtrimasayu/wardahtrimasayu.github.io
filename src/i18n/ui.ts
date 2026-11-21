@@ -1,7 +1,7 @@
 import type { Locale } from './locales';
 
 // UI strings are plain text. {name} placeholders are filled by t(key, { name }).
-const id = {
+const id: Record<UiKey, string> = {
   'meta.title': 'Portofolio Wardah Tri Masayu',
   'meta.description':
     'Portofolio Wardah Tri Masayu, mahasiswa Statistika yang tertarik pada analisis data dan pemrograman.',
@@ -29,6 +29,7 @@ const id = {
 
   'terminal.demo': 'Pratinjau profil singkat',
   'terminal.label': 'Sesi profil Wardah tri Masayu',
+  'profile.photoAlt': 'Foto profil Wardah Tri Masayu',
 
   'category.desktop': 'Desktop',
   'category.terminal': 'Terminal',
@@ -114,9 +115,7 @@ const id = {
     'Mahasiswa Program Studi Statistika, FMIPA Universitas Cenderawasih yang berfokus membangun fondasi analisis data menuju karier sebagai Financial Analyst.',
 };
 
-export type UiKey = keyof typeof en;
-
-const en: Record<UiKey, string> = {
+const en = {
   'meta.title': 'Wardah Tri Masayu Portfolio',
   'meta.description':
     'Wardah Tri Masayu portfolio, a Statistics student interested in data analysis and programming.',
@@ -142,6 +141,7 @@ const en: Record<UiKey, string> = {
   'theme.paper': 'Paper',
   'terminal.demo': 'Short profile preview',
   'terminal.label': 'Wardah Tri Masayu profile session',
+  'profile.photoAlt': 'Wardah Tri Masayu profile photo',
   'category.desktop': 'Desktop',
   'category.terminal': 'Terminal',
   'category.editor': 'Editors',
@@ -220,6 +220,8 @@ const en: Record<UiKey, string> = {
   'about.credits':
     'A Statistics student at FMIPA Universitas Cenderawasih, focused on building a data analysis foundation for a career as a Financial Analyst.',
 };
+
+export type UiKey = keyof typeof en;
 
 export const ui: Record<Locale, Record<UiKey, string>> = { id, en };
 

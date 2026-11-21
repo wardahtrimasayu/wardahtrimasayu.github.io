@@ -5,17 +5,33 @@ import SectionHeader from '../components/SectionHeader.astro';
 import StepCard from '../components/StepCard.astro';
 import { getI18n } from '../i18n/context';
 import Layout from '../layouts/Layout.astro';
+import { asset } from '../lib/urls';
 
 const { t } = getI18n(Astro.currentLocale);
 const rules = [1, 2, 3] as const;
+const profilePhoto = asset('/images/profil.jpeg', import.meta.env.BASE_URL);
 ---
 
 <Layout title={t('about.eyebrow')} description={t('about.metaDescription')}>
   <Section>
-    <SectionHeader eyebrow={t('about.eyebrow')} title={t('about.title')} level={1} />
-    <div class="max-w-2xl space-y-4 text-muted">
-      <p>{t('about.p1')}</p>
-      <p>{t('about.p2')}</p>
+    <div class="grid items-center gap-8 md:grid-cols-[240px_minmax(0,1fr)]">
+      <div class="flex justify-center md:justify-start">
+        <img
+          src={profilePhoto}
+          alt={t('profile.photoAlt')}
+          width="240"
+          height="320"
+          loading="eager"
+          class="h-72 w-56 rounded-[1.75rem] border-4 border-raised object-cover object-[center_32%] shadow-xl md:h-80 md:w-60"
+        />
+      </div>
+      <div>
+        <SectionHeader eyebrow={t('about.eyebrow')} title={t('about.title')} level={1} />
+        <div class="mt-6 max-w-2xl space-y-4 text-muted">
+          <p>{t('about.p1')}</p>
+          <p>{t('about.p2')}</p>
+        </div>
+      </div>
     </div>
   </Section>
 

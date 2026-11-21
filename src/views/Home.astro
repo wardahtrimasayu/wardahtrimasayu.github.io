@@ -5,12 +5,12 @@ import CtaBox from '../components/CtaBox.astro';
 import IntegrationCard from '../components/IntegrationCard.astro';
 import Section from '../components/Section.astro';
 import SectionHeader from '../components/SectionHeader.astro';
-import TerminalMock from '../components/TerminalMock.astro';
 import { site } from '../config/site';
 import { getI18n } from '../i18n/context';
 import Layout from '../layouts/Layout.astro';
 import { getIntegrations, type Integration } from '../lib/integrations';
 import { getCtas } from '../lib/ctas';
+import { asset } from '../lib/urls';
 
 interface Props {
   items?: Integration[];
@@ -21,6 +21,7 @@ const hero = site.hero[locale];
 const ctas = getCtas(locale, import.meta.env.BASE_URL);
 const integrations = Astro.props.items ?? getIntegrations(locale);
 const featured = integrations.filter(item => item.featured);
+const profilePhoto = asset('/images/profil.jpeg', import.meta.env.BASE_URL);
 ---
 
 <Layout>
@@ -52,8 +53,19 @@ const featured = integrations.filter(item => item.featured);
           </a>
         </div>
       </div>
-      <div class="lg:col-span-6">
-        <TerminalMock />
+      <div class="flex justify-center lg:col-span-6 lg:justify-end">
+        <div class="relative">
+          <div class="absolute -inset-3 rounded-[2.25rem] border border-accent/30" aria-hidden="true"></div>
+          <img
+            src={profilePhoto}
+            alt={t('profile.photoAlt')}
+            width="320"
+            height="400"
+            loading="eager"
+            fetchpriority="high"
+            class="relative h-80 w-64 rounded-[2rem] border-4 border-raised object-cover object-[center_32%] shadow-xl sm:h-96 sm:w-72 lg:h-[26rem] lg:w-80"
+          />
+        </div>
       </div>
     </div>
   </Section>
