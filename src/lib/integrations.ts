@@ -7,7 +7,7 @@ const link = z
   .refine(value => ['https:', 'http:'].includes(new URL(value).protocol));
 const entry = z.object({
   slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
-  locale: z.enum(['en', 'pt-br']),
+  locale: z.enum(['id', 'en']),
   name: z.string().min(1),
   description: z.string().min(1),
   category: z.enum(['editor', 'terminal', 'automation']),
@@ -32,7 +32,7 @@ export function parseIntegrations(input: unknown): Integration[] {
     keys.add(key);
   }
   for (const item of entries) {
-    for (const locale of ['en', 'pt-br']) {
+    for (const locale of ['id', 'en']) {
       if (!keys.has(`${locale}/${item.slug}`)) throw new Error(`Missing translation: ${locale}/${item.slug}`);
     }
   }
@@ -40,4 +40,4 @@ export function parseIntegrations(input: unknown): Integration[] {
 }
 
 export const integrations = parseIntegrations(source);
-export const getIntegrations = (locale: 'en' | 'pt-br') => integrations.filter(item => item.locale === locale);
+export const getIntegrations = (locale: 'id' | 'en') => integrations.filter(item => item.locale === locale);

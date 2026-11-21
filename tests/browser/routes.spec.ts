@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 const paths = ['', 'about', 'integrations', 'integrations/pengolahan-data-excel', 'docs'];
 
-for (const locale of ['', 'pt-br/']) {
+for (const locale of ['', 'en/']) {
   for (const path of paths) {
     const url = path ? `${locale}${path}` : locale.replace(/\/$/, '');
     test(`renders ${url || '/'}`, async ({ page }) => {

@@ -2,15 +2,15 @@ import { expect, it } from 'vitest';
 import { asset, route, alternate } from './urls';
 
 it.each([
-  ['/', 'en', '/', '/'],
-  ['/toolkit/', 'en', '/docs', '/toolkit/docs'],
-  ['/toolkit/', 'pt-br', '/integrations/editor', '/toolkit/pt-br/integrations/editor'],
-  ['/toolkit/', 'pt-br', '/docs#install', '/toolkit/pt-br/docs#install'],
+  ['/', 'id', '/', '/'],
+  ['/toolkit/', 'id', '/docs', '/toolkit/docs'],
+  ['/toolkit/', 'en', '/integrations/editor', '/toolkit/en/integrations/editor'],
+  ['/toolkit/', 'en', '/docs#install', '/toolkit/en/docs#install'],
 ] as const)('composes %s %s %s', (base, locale, path, result) => expect(route(path, locale, base)).toBe(result));
 
 it('switches locale without duplicating the base', () => {
-  expect(alternate('/toolkit/pt-br/docs/', 'en', '/toolkit/')).toBe('/toolkit/docs');
-  expect(alternate('/toolkit/docs', 'pt-br', '/toolkit/')).toBe('/toolkit/pt-br/docs');
+  expect(alternate('/toolkit/en/docs/', 'id', '/toolkit/')).toBe('/toolkit/docs');
+  expect(alternate('/toolkit/docs', 'en', '/toolkit/')).toBe('/toolkit/en/docs');
 });
 
 it('resolves assets from the base without a locale prefix', () => {

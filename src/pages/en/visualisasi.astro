@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Section from '../../components/Section.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+
+const dataStats = [
+  { label: 'Descriptive Statistics', value: 88 },
+  { label: 'Excel Processing', value: 92 },
+  { label: 'Python Computing', value: 85 },
+  { label: 'Regression Analysis', value: 80 },
+  { label: 'Data Visualization', value: 90 },
+];
+---
+
+<Layout title="Data Visualization" description="Statistics data visualization and analysis">
+  <Section>
+    <SectionHeader
+      eyebrow="Statistics & Analysis"
+      title="Data Visualization"
+      description="Examples of interactive charts generated from statistics data processing."
+    />
+    <div class="max-w-3xl space-y-6">
+      <div class="p-6 rounded border">
+        <h3 class="font-bold text-lg mb-2">Assignment and Computation Practice Score Distribution</h3>
+        <p class="text-sm text-muted mb-6">Comparison of average data-analysis results using Excel, Python, and basic statistics (%).</p>
+        <div class="space-y-4">
+          {dataStats.map(item => (
+            <div class="space-y-1">
+              <div class="flex justify-between text-sm"><span>{item.label}</span><span class="font-bold">{item.value}%</span></div>
+              <div class="w-full h-4 rounded border overflow-hidden">
+                <div style={`width: ${item.value}%; background-color: #a78bfa; height: 100%; transition: width 0.5s ease;`} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Section>
+</Layout>

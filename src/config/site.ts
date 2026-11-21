@@ -32,11 +32,11 @@ const schema = z.object({
   repository: webUrl,
   author: z.string().min(1),
   version: z.string().min(1),
-  ctas: z.object({ en: ctas, 'pt-br': ctas }),
+  ctas: z.object({ id: ctas, en: ctas }),
   nav: z.array(z.object({ href: z.string().regex(/^\/(?!\/)[a-z0-9/-]*$/), key: z.string().min(1) })),
   hero: z.object({
+    id: z.object({ title: z.string(), description: z.string() }),
     en: z.object({ title: z.string(), description: z.string() }),
-    'pt-br': z.object({ title: z.string(), description: z.string() }),
   }),
   install: z.array(
     z.object({ id: z.string().regex(/^[a-z0-9-]+$/), label: z.string().min(1), command: z.string().min(1) }),
@@ -52,7 +52,7 @@ export const site = parseSite({
   author: 'Wardah Tri Masayu',
   version: '0.0.1',
   ctas: {
-    en: {
+    id: {
       header: { label: 'Mulai', href: '/docs' },
       hero: {
         primary: { label: 'Tentang Saya', href: '/about' },
@@ -62,22 +62,22 @@ export const site = parseSite({
         eyebrow: 'Portofolio',
         title: 'Halo! Selamat datang di ruang digital saya.',
         body: 'Saya Wardah Tri Masayu, mahasiswa yang antusias mempelajari pemrograman dan pengembangan web.',
-        primary: { label: 'Repositori Github', href: 'repository' },
+        primary: { label: 'Repositori Github', href: 'https://github.com/wardahtrimasayu/wardahtrimasayu.github.io' },
         secondary: { label: 'Lihat Keahlian', href: '/docs' },
       },
     },
-    'pt-br': {
-      header: { label: 'Começar', href: '/docs' },
+    en: {
+      header: { label: 'Start', href: '/docs' },
       hero: {
-        primary: { label: 'Documentação', href: '/docs' },
-        secondary: { label: 'Integrações', href: '/integrations' },
+        primary: { label: 'About Me', href: '/about' },
+        secondary: { label: 'My Projects', href: '/integrations' },
       },
       box: {
-        eyebrow: 'Código aberto',
-        title: 'Deixe com a sua cara.',
-        body: 'Troque o nome, o domínio e as integrações de exemplo, e publique o site estático.',
-        primary: { label: 'Repositório no GitHub', href: 'repository' },
-        secondary: { label: 'Ler o guia', href: '/docs' },
+        eyebrow: 'Portfolio',
+        title: 'Hello! Welcome to my digital space.',
+        body: 'I am Wardah Tri Masayu, a student enthusiastic about programming and web development.',
+        primary: { label: 'GitHub Repository', href: 'https://github.com/wardahtrimasayu/wardahtrimasayu.github.io' },
+        secondary: { label: 'View Skills', href: '/docs' },
       },
     },
   },
@@ -93,13 +93,13 @@ export const site = parseSite({
     { href: '/kalkulator', key: 'nav.calc' },
   ],
   hero: {
-    en: {
+    id: {
       title: 'Portofolio Wardah Tri Masayu',
       description: 'Mahasiswa Statistika yang tertarik pada analisis data dan pemrograman.',
     },
-    'pt-br': {
-      title: 'Portofolio Wardah Tri Masayu',
-      description: 'Mahasiswa Statistika yang tertarik pada analisis data dan pemrograman.',
+    en: {
+      title: 'Wardah Tri Masayu Portfolio',
+      description: 'A Statistics student interested in data analysis and programming.',
     },
   },
   install: [

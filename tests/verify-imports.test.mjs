@@ -16,7 +16,7 @@ test('accepts internal imports', () => {
 
 test('accepts a nested page wrapper and an astro frontmatter import', () => {
   const source = "---\nimport View from '../../../views/Integrations.astro';\n---\n<View />\n";
-  assert.doesNotThrow(() => scanImports('/starter', '/starter/src/pages/pt-br/integrations/index.astro', source));
+  assert.doesNotThrow(() => scanImports('/starter', '/starter/src/pages/en/integrations/index.astro', source));
 });
 
 test('rejects the source domain and a dynamic relative glob', () => {

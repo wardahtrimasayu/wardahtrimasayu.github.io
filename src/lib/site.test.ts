@@ -20,8 +20,8 @@ describe('isActive', () => {
 
 describe('isActive in a prefixed locale', () => {
   it('treats the locale root as Home', () => {
-    expect(isActive('/pt-br', '/pt-br', '/pt-br')).toBe(true);
-    expect(isActive('/pt-br', '/pt-br/ports', '/pt-br')).toBe(false);
-    expect(isActive('/pt-br/ports', '/pt-br/ports/ghostty', '/pt-br')).toBe(true);
+    expect(isActive('/en', '/en', '/en')).toBe(true);
+    expect(isActive('/en', '/en/ports', '/en')).toBe(false);
+    expect(isActive('/en/ports', '/en/ports/ghostty', '/en')).toBe(true);
   });
 });

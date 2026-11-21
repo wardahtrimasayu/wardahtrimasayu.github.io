@@ -13,7 +13,7 @@ const entry = {
 };
 
 it('accepts paired locales without screenshots', () => {
-  expect(parseIntegrations([entry, { ...entry, locale: 'pt-br' }])).toHaveLength(2);
+  expect(parseIntegrations([entry, { ...entry, locale: 'id' }])).toHaveLength(2);
 });
 
 it('rejects unsafe links and slugs', () => {

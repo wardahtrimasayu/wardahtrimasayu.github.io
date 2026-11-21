@@ -6,7 +6,7 @@ import { site } from '../config/site';
 it('presents a developer tool instead of a terminal palette', async () => {
   const container = await AstroContainer.create();
   const html = await container.renderToString(Home, { request: new Request('https://example.com/') });
-  expect(html).toContain(site.hero.en.title);
+  expect(html).toContain(site.hero.id.title);
   expect(html).toContain('/integrations');
   expect(html).not.toContain('Bats');
   expect(html).not.toContain('/ports');

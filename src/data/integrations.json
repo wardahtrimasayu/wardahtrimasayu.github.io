@@ -2,7 +2,7 @@
 
   {
     "slug": "pengolahan-data-excel",
-    "locale": "en",
+    "locale": "id",
     "name": "Pengolahan Data & Tabel Microsoft Excel",
     "description": "Praktik merapikan data terstruktur, penrapan rumus logika, dan ringkasan perhitungan dasar menggunakan Microsoft Excel.",
     "category": "automation",
@@ -14,7 +14,7 @@
   },
   {
     "slug": "komputasi-dasar-python",
-    "locale": "en",
+    "locale": "id",
     "name": "Tugas Komputasi & Logika dasar Python",
     "description": "Pengenalan Pemrogram Python untuk perhitungan matematis dan konsep statistika deskriptif tahap awal menggunakan Jupyter Notebook:Python.",
     "category": "terminal",
@@ -26,7 +26,7 @@
   },
   {
     "slug": "esai-analisis-kritis",
-    "locale": "en",
+    "locale": "id",
     "name": "Esai Akademik & Analisis Kritis",
     "description": "Penulisan esai terstruktur yang melatih kemampuan menyusun argumen logis dan komunikasi analisis secara jelas menggunakan Microsoft Word.",
     "category": "editor",
@@ -38,38 +38,38 @@
   },
   {
     "slug": "pengolahan-data-excel",
-    "locale": "pt-br",
-    "name": "Processamento de Dados e Planilhas no Microsoft Excel",
-    "description": "Pratica de organizacao de dados estruturados, formulas logicas e resumo de calculos usando Microsoft Excel.",
+    "locale": "en",
+    "name": "Data Processing and Microsoft Excel Tables",
+    "description": "Practice cleaning structured data, applying logical formulas, and summarizing basic calculations using Microsoft Excel.",
     "category": "automation",
     "icon": "lucide:table",
     "homepage": "https://github.com",
     "featured": true,
     "screenshot": "/images/example.svg",
-    "body": "Projeto pratico de processamento de dados estruturados com Microsoft Excel para desenvolver precisao, limpeza de dados e apresentacao clara de resumos numericos."
+    "body": "A practical project for processing structured data using Microsoft Excel to develop accuracy, data cleaning skills, and clear presentation of numerical summaries."
   },
   {
     "slug": "komputasi-dasar-python",
-    "locale": "pt-br",
-    "name": "Exercicios de Computacao e Logica Basica em Python",
-    "description": "Introducao a Python para calculos matematicos e conceitos iniciais de estatistica descritiva.",
+    "locale": "en",
+    "name": "Basic Python Computing and Logic Exercises",
+    "description": "An introduction to Python for mathematical calculations and introductory concepts in descriptive statistics using Jupyter Notebook.",
     "category": "terminal",
     "icon": "lucide:code",
     "homepage": "https://github.com",
     "featured": true,
     "screenshot": "/images/example.svg",
-    "body": "Projeto academico voltado a logica basica em Python para apoiar calculos quantitativos e a aplicacao de conceitos de estatistica descritiva."
+    "body": "A university assignment focused on understanding basic Python logic to support quantitative calculations and apply descriptive statistics concepts."
   },
   {
     "slug": "esai-analisis-kritis",
-    "locale": "pt-br",
-    "name": "Ensaios Academicos e Analise Critica",
-    "description": "Redacao academica estruturada para desenvolver argumentos logicos e comunicacao clara da analise.",
+    "locale": "en",
+    "name": "Academic Essays and Critical Analysis",
+    "description": "Structured academic writing that develops logical arguments and clear analytical communication using Microsoft Word.",
     "category": "editor",
     "icon": "lucide:file-text",
     "homepage": "https://github.com",
     "featured": true,
     "screenshot": "/images/example.svg",
-    "body": "Trabalho academico organizado para desenvolver pensamento critico, argumentacao baseada em evidencias e comunicacao clara."
+    "body": "An academic paper organized systematically to develop critical thinking, evidence-based argumentation, and the ability to communicate ideas clearly."
   }
 ]

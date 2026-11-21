@@ -10,14 +10,14 @@ export default defineConfig({
     icon(),
     sitemap({
       i18n: {
-        defaultLocale: 'en',
-        locales: { en: 'en', 'pt-br': 'pt-BR' },
+        defaultLocale: 'id',
+        locales: { id: 'id', en: 'en' },
       },
     }),
   ],
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'pt-br'],
+    defaultLocale: 'id',
+    locales: ['id', 'en'],
     routing: { prefixDefaultLocale: false },
   },
   trailingSlash: 'never',

@@ -3,7 +3,7 @@ import { getIntegrations, type Integration } from '../../../lib/integrations';
 import IntegrationDetail from '../../../views/IntegrationDetail.astro';
 
 export function getStaticPaths() {
-  return getIntegrations('pt-br').map(integration => ({
+  return getIntegrations('en').map(integration => ({
     params: { slug: integration.slug },
     props: { integration },
   }));

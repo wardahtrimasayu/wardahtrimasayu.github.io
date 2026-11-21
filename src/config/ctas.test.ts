@@ -20,21 +20,21 @@ vi.mock('./site', async importOriginal => {
       secondary: { label: `Box secondary ${suffix}`, href: '/about' },
     },
   });
-  return { ...original, site: { ...original.site, ctas: { en: actions('EN'), 'pt-br': actions('PT') } } };
+  return { ...original, site: { ...original.site, ctas: { id: actions('ID'), en: actions('EN') } } };
 });
 
 it('renders all configured CTA labels and destinations without editing views', async () => {
   const container = await AstroContainer.create();
   const html = await container.renderToString(Home);
   for (const label of [
-    'Header EN',
-    'Hero primary EN',
-    'Hero secondary EN',
-    'Box primary EN',
-    'Box secondary EN',
-    'Eyebrow EN',
-    'Title EN',
-    'Body EN',
+    'Header ID',
+    'Hero primary ID',
+    'Hero secondary ID',
+    'Box primary ID',
+    'Box secondary ID',
+    'Eyebrow ID',
+    'Title ID',
+    'Body ID',
   ]) {
     expect(html).toContain(label);
   }
@@ -43,8 +43,8 @@ it('renders all configured CTA labels and destinations without editing views', a
   expect(html).toContain(site.repository);
 });
 it('localizes internal CTA paths and preserves external and repository URLs', () => {
-  const ctas = getCtas('pt-br', '/toolkit/');
-  expect(ctas.header).toEqual({ label: 'Header PT', href: '/toolkit/pt-br/about#start' });
+  const ctas = getCtas('en', '/toolkit/');
+  expect(ctas.header).toEqual({ label: 'Header EN', href: '/toolkit/en/about#start' });
   expect(ctas.hero.secondary.href).toBe('https://example.org/download');
   expect(ctas.box.primary.href).toBe(site.repository);
 });

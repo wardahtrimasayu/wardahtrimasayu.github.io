@@ -12,7 +12,7 @@ it('renders configured identity and repository', async () => {
   expect(html).not.toContain('href="/showcase"');
 });
 
-it.each(['/', '/pt-br'])('credits the theme author in the footer on %s', async pathname => {
+it.each(['/', '/en'])('credits the theme author in the footer on %s', async pathname => {
   const container = await AstroContainer.create();
   const html = await container.renderToString(Layout, {
     request: new Request(`https://example.com${pathname}`),

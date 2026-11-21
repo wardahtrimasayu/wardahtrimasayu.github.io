@@ -3,9 +3,10 @@ import { expect, it } from 'vitest';
 import { pageMetadata, robotsBody } from './seo';
 
 it('builds absolute base-aware canonical and alternate links', () => {
-  const meta = pageMetadata('https://example.com', '/toolkit/', '/toolkit/pt-br/docs/', 'Docs', 'Guide');
-  expect(meta.canonical).toBe('https://example.com/toolkit/pt-br/docs');
-  expect(meta.alternates.en).toBe('https://example.com/toolkit/docs');
+  const meta = pageMetadata('https://example.com', '/toolkit/', '/toolkit/en/docs/', 'Docs', 'Guide');
+  expect(meta.canonical).toBe('https://example.com/toolkit/en/docs');
+  expect(meta.alternates.id).toBe('https://example.com/toolkit/docs');
+  expect(meta.alternates.en).toBe('https://example.com/toolkit/en/docs');
   expect(meta.image).toBe('https://example.com/toolkit/og-image.svg');
 });
 

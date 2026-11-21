@@ -3,46 +3,46 @@ import { DEFAULT_LOCALE, LOCALES, htmlLang, localizePath, switchLocalePath, toLo
 import { ui } from './ui';
 
 describe('locales', () => {
-  it('serves English by default and Brazilian Portuguese', () => {
-    expect(DEFAULT_LOCALE).toBe('en');
-    expect(LOCALES).toEqual(['en', 'pt-br']);
+  it('serves Indonesian by default and English', () => {
+    expect(DEFAULT_LOCALE).toBe('id');
+    expect(LOCALES).toEqual(['id', 'en']);
   });
 
   it('falls back to the default for unknown values', () => {
-    expect(toLocale('pt-br')).toBe('pt-br');
-    expect(toLocale(undefined)).toBe('en');
-    expect(toLocale('fr')).toBe('en');
+    expect(toLocale('en')).toBe('en');
+    expect(toLocale(undefined)).toBe('id');
+    expect(toLocale('fr')).toBe('id');
   });
 
   it('maps locales to BCP 47 html lang values', () => {
     expect(htmlLang('en')).toBe('en');
-    expect(htmlLang('pt-br')).toBe('pt-BR');
+    expect(htmlLang('id')).toBe('id');
   });
 });
 
 describe('localizePath', () => {
-  it('keeps English paths unprefixed', () => {
-    expect(localizePath('/ports', 'en')).toBe('/ports');
-    expect(localizePath('/', 'en')).toBe('/');
+  it('keeps Indonesian paths unprefixed', () => {
+    expect(localizePath('/ports', 'id')).toBe('/ports');
+    expect(localizePath('/', 'id')).toBe('/');
   });
 
   it('prefixes other locales', () => {
-    expect(localizePath('/ports/ghostty', 'pt-br')).toBe('/pt-br/ports/ghostty');
-    expect(localizePath('/', 'pt-br')).toBe('/pt-br');
+    expect(localizePath('/ports/ghostty', 'en')).toBe('/en/ports/ghostty');
+    expect(localizePath('/', 'en')).toBe('/en');
   });
 
   it('keeps the hash', () => {
-    expect(localizePath('/docs#quickstart', 'pt-br')).toBe('/pt-br/docs#quickstart');
+    expect(localizePath('/docs#quickstart', 'en')).toBe('/en/docs#quickstart');
   });
 });
 
 describe('switchLocalePath', () => {
   it('moves the current page to another locale', () => {
-    expect(switchLocalePath('/ports/ghostty', 'pt-br')).toBe('/pt-br/ports/ghostty');
-    expect(switchLocalePath('/pt-br/ports/ghostty', 'en')).toBe('/ports/ghostty');
-    expect(switchLocalePath('/pt-br', 'en')).toBe('/');
-    expect(switchLocalePath('/pt-br/', 'en')).toBe('/');
-    expect(switchLocalePath('/', 'pt-br')).toBe('/pt-br');
+    expect(switchLocalePath('/ports/ghostty', 'en')).toBe('/en/ports/ghostty');
+    expect(switchLocalePath('/en/ports/ghostty', 'id')).toBe('/ports/ghostty');
+    expect(switchLocalePath('/en', 'id')).toBe('/');
+    expect(switchLocalePath('/en/', 'id')).toBe('/');
+    expect(switchLocalePath('/', 'en')).toBe('/en');
   });
 });
 

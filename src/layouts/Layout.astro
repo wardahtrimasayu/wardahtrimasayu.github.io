@@ -28,7 +28,7 @@ const ctas = getCtas(locale, base);
 const home = path('/');
 
 function navigationLabel(key: string): string {
-  if (!(key in ui.en) || !(key in ui['pt-br'])) throw new Error(`Unknown navigation key: ${key}`);
+  if (!(key in ui.id) || !(key in ui.en)) throw new Error(`Unknown navigation key: ${key}`);
   return t(key as UiKey);
 }
 
@@ -62,8 +62,8 @@ const meta = pageMetadata(site.url, base, pathname, pageTitle, description);
     <link rel="canonical" href={meta.canonical} />
     <link rel="icon" href={asset('/favicon.svg', base)} type="image/svg+xml" />
     <link rel="alternate" hreflang={htmlLang('en')} href={meta.alternates.en} />
-    <link rel="alternate" hreflang={htmlLang('pt-br')} href={meta.alternates['pt-br']} />
-    <link rel="alternate" hreflang="x-default" href={meta.alternates.en} />
+    <link rel="alternate" hreflang={htmlLang('id')} href={meta.alternates.id} />
+    <link rel="alternate" hreflang="x-default" href={meta.alternates.id} />
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.description} />
     <meta property="og:url" content={meta.canonical} />
@@ -118,7 +118,7 @@ const meta = pageMetadata(site.url, base, pathname, pageTitle, description);
                 hreflang={htmlLang(l)}
                 lang={htmlLang(l)}
                 aria-current={l === locale ? 'true' : undefined}
-                aria-label={`${LOCALE_LABELS[l].short}, ${LOCALE_LABELS[l].name}`}
+                aria-label={LOCALE_LABELS[l].name}
                 class:list={[
                   'rounded border px-2 py-0.5 font-mono text-[11px] transition-colors',
                   l === locale
@@ -126,7 +126,7 @@ const meta = pageMetadata(site.url, base, pathname, pageTitle, description);
                     : 'border-transparent text-muted hover:text-fg',
                 ]}
               >
-                {LOCALE_LABELS[l].short}
+                {LOCALE_LABELS[l].name}
               </a>
             ))}
           </nav>

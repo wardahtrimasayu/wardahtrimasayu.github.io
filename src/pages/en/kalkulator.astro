@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Section from '../../components/Section.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+---
+
+<Layout title="Statistics Calculator" description="Interactive basic statistics calculator">
+  <Section>
+    <SectionHeader eyebrow="Analysis Tool" title="Basic Statistics Calculator" description="Enter comma-separated numbers to calculate the mean, median, minimum, maximum, and range." />
+    <div class="max-w-2xl space-y-6">
+      <div class="p-6 rounded border space-y-4">
+        <label for="dataInput" class="block text-sm font-medium mb-2">Enter Numeric Data (comma-separated)</label>
+        <input id="dataInput" type="text" value="80, 85, 90, 75, 95" class="w-full p-2.5 rounded border bg-transparent" placeholder="Example: 70, 82, 88, 91, 79" />
+        <button id="hitungBtn" type="button" class="px-4 py-2 rounded border font-medium">Calculate Statistics</button>
+        <div id="hasilBox" class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+          <div class="p-3 rounded border"><p class="text-xs text-muted">Sample Count (n)</p><p id="resCount" class="text-lg font-bold">5</p></div>
+          <div class="p-3 rounded border"><p class="text-xs text-muted">Mean</p><p id="resMean" class="text-lg font-bold">85.00</p></div>
+          <div class="p-3 rounded border"><p class="text-xs text-muted">Median</p><p id="resMedian" class="text-lg font-bold">85.00</p></div>
+          <div class="p-3 rounded border"><p class="text-xs text-muted">Minimum</p><p id="resMin" class="text-lg font-bold">75</p></div>
+          <div class="p-3 rounded border"><p class="text-xs text-muted">Maximum</p><p id="resMax" class="text-lg font-bold">95</p></div>
+          <div class="p-3 rounded border"><p class="text-xs text-muted">Range</p><p id="resRange" class="text-lg font-bold">20</p></div>
+        </div>
+      </div>
+    </div>
+  </Section>
+</Layout>

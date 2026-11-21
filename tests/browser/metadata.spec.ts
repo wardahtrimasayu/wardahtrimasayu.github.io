@@ -12,8 +12,8 @@ test('canonical, alternates, favicon and social image follow the base', async ({
   const meta = pageMetadata(site.url, base, pathname, 'Docs', 'Guide');
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', meta.canonical);
   await expect(page.locator('link[hreflang="en"]')).toHaveAttribute('href', meta.alternates.en);
-  await expect(page.locator('link[hreflang="pt-BR"]')).toHaveAttribute('href', meta.alternates['pt-br']);
-  await expect(page.locator('link[hreflang="x-default"]')).toHaveAttribute('href', meta.alternates.en);
+  await expect(page.locator('link[hreflang="id"]')).toHaveAttribute('href', meta.alternates.id);
+  await expect(page.locator('link[hreflang="x-default"]')).toHaveAttribute('href', meta.alternates.id);
   await expect(page.locator('link[rel="icon"]')).toHaveAttribute('href', asset('/favicon.svg', base));
   await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', meta.image);
   expect(meta.canonical.includes('/toolkit/toolkit')).toBe(false);
@@ -41,7 +41,7 @@ test('sitemap and robots use the configured origin', async ({ page }) => {
     expect(child.ok()).toBeTruthy();
     pages.push(...[...(await child.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]));
   }
-  expect(pages.some(url => url.includes('/pt-br'))).toBeTruthy();
+  expect(pages.some(url => url.includes('/en'))).toBeTruthy();
   expect(pages.some(url => url.includes('/integrations/'))).toBeTruthy();
   for (const url of pages) {
     expect(url.startsWith(`${site.url}${prefix}`)).toBeTruthy();

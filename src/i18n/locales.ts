@@ -1,12 +1,12 @@
 import { alternate } from '../lib/urls';
 
-export const LOCALES = ['en', 'pt-br'] as const;
+export const LOCALES = ['id', 'en'] as const;
 export type Locale = (typeof LOCALES)[number];
-export const DEFAULT_LOCALE: Locale = 'en';
+export const DEFAULT_LOCALE: Locale = 'id';
 
 export const LOCALE_LABELS: Record<Locale, { short: string; name: string }> = {
+  id: { short: 'ID', name: 'Indonesia' },
   en: { short: 'EN', name: 'English' },
-  'pt-br': { short: 'PT', name: 'Português (Brasil)' },
 };
 
 export function toLocale(value: string | undefined): Locale {
@@ -14,10 +14,10 @@ export function toLocale(value: string | undefined): Locale {
 }
 
 export function htmlLang(locale: Locale): string {
-  return locale === 'pt-br' ? 'pt-BR' : locale;
+  return locale;
 }
 
-// '/ports' -> '/pt-br/ports'; English stays unprefixed.
+// Indonesian paths stay unprefixed; English paths use /en.
 export function localizePath(path: string, locale: Locale): string {
   if (locale === DEFAULT_LOCALE) return path;
   const [pathname, hash] = path.split('#');

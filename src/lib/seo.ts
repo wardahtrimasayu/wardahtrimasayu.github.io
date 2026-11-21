@@ -8,8 +8,8 @@ export function pageMetadata(origin: string, base: string, pathname: string, tit
     description,
     canonical: new URL(canonicalPath, origin).href,
     alternates: {
+      id: new URL(alternate(pathname, 'id', base), origin).href,
       en: new URL(alternate(pathname, 'en', base), origin).href,
-      'pt-br': new URL(alternate(pathname, 'pt-br', base), origin).href,
     },
     image: new URL(`${prefix === '/' ? '' : prefix}/og-image.svg`, origin).href,
   };

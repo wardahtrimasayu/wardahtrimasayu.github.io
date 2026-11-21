@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Section from '../../components/Section.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+
+const summary = [
+  { label: 'Public Repositories', value: '3+', description: 'Portfolio & Statistics Projects' },
+  { label: 'Main Technologies', value: 'Astro & Python', description: 'Web & Data Computing' },
+  { label: 'Account Status', value: 'Active', description: '@wardahtrimasayu' },
+];
+const languages = [
+  { name: 'Astro / HTML / CSS', percent: 55 },
+  { name: 'TypeScript / JavaScript', percent: 25 },
+  { name: 'Python (Data Analysis)', percent: 20 },
+];
+---
+
+<Layout title="GitHub Statistics" description="GitHub activity and repository statistics for Wardah Tri Masayu">
+  <Section>
+    <SectionHeader eyebrow="Code Activity" title="GitHub Statistics" description="A summary of contributions, repositories, and programming languages from my GitHub account." />
+    <div class="max-w-3xl space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {summary.map(item => (
+          <div class="p-5 rounded border space-y-1"><p class="text-xs text-muted">{item.label}</p><p class="text-2xl font-bold">{item.value}</p><p class="text-xs text-muted">{item.description}</p></div>
+        ))}
+      </div>
+      <div class="p-6 rounded border space-y-4">
+        <h3 class="font-bold text-lg">Language & Technology Distribution in Repositories</h3>
+        {languages.map(language => (
+          <div class="space-y-1"><div class="flex justify-between text-sm"><span>{language.name}</span><span class="font-bold">{language.percent}%</span></div><div class="w-full h-3 rounded border overflow-hidden"><div style={`width: ${language.percent}%; background-color: #a78bfa; height: 100%;`} /></div></div>
+        ))}
+      </div>
+    </div>
+  </Section>
+</Layout>

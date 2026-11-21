@@ -35,6 +35,6 @@ it('omits the screenshot when the integration has none', async () => {
 it('announces an empty catalogue', async () => {
   const container = await AstroContainer.create();
   const html = await container.renderToString(Integrations, { props: { items: [] } });
-  expect(html).toContain(ui.en['integrations.empty']);
+  expect(html).toContain(ui.id['integrations.empty']);
   expect(html).not.toContain('/ports/');
 });

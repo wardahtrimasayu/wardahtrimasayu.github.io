@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Section from '../../components/Section.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+
+const articles = [
+  { title: 'Understanding Descriptive Statistics in Initial Data Analysis', date: 'November 18, 2026', category: 'Statistics', summary: 'Descriptive statistics helps summarize raw data into understandable information through measures of central tendency and variability.', body: 'Before performing modeling or complex hypothesis testing, a data analyst must understand the basic characteristics of the data. Calculating the mean and median and examining data distribution through tables or bar charts helps detect outliers and patterns early.' },
+  { title: 'Practical Tips for Processing Structured Data with Microsoft Excel', date: 'November 20, 2026', category: 'Data Computing', summary: 'Using functions such as AVERAGE, STDEV.S, COUNTIF, and PivotTable to speed up academic or research data summaries.', body: 'Microsoft Excel remains an efficient tool for cleaning and exploring small to medium-sized datasets. Filters, data validation, and summary charts help minimize input errors and present analytical reports visually.' },
+];
+---
+
+<Layout title="Blog & Notes" description="Notes and writing about statistics and data analysis">
+  <Section>
+    <SectionHeader eyebrow="Writing & Notes" title="Statistics Blog" description="A collection of class notes, statistics concepts, and data-analysis learning experiences." />
+    <div class="max-w-3xl space-y-6">
+      {articles.map(article => (
+        <article class="p-6 rounded border space-y-3">
+          <div class="flex flex-wrap items-center gap-3 text-xs text-muted"><span class="px-2 py-1 rounded border">{article.category}</span><span>{article.date}</span></div>
+          <h2 class="text-xl font-bold">{article.title}</h2><p class="font-medium text-sm">{article.summary}</p><p class="text-sm text-muted leading-relaxed">{article.body}</p>
+        </article>
+      ))}
+    </div>
+  </Section>
+</Layout>

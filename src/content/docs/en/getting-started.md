@@ -8,7 +8,7 @@ Edit `src/config/site.ts`. Set `name`, `url`, `repository` and the hero copy for
 
 ## Integrations
 
-Edit `src/data/integrations.json`. Keep one record for `en` and one for `pt-br` for every slug. Use `https://` links and
+Edit `src/data/integrations.json`. Keep one record for `id` and one for `en` for every slug. Use `https://` links and
 optional screenshots under `public/images/`.
 
 ## Demo command
