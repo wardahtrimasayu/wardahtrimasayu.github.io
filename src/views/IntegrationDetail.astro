@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
 import Section from '../components/Section.astro';
-import { site } from '../config/site';
 import { getI18n } from '../i18n/context';
 import Layout from '../layouts/Layout.astro';
 import type { Integration } from '../lib/integrations';
@@ -40,6 +39,11 @@ const image = integration.screenshot ? asset(integration.screenshot, import.meta
           {t('integrations.pageTitle', { name: integration.name })}
         </h1>
         <p class="max-w-xl text-sm text-muted">{integration.description}</p>
+        {integration.technologies.length > 0 && (
+          <p class="font-mono text-xs text-accent">
+            {integration.technologies.join(' · ')}
+          </p>
+        )}
       </div>
       <div class="flex flex-wrap items-center gap-3">
         <a
@@ -48,13 +52,6 @@ const image = integration.screenshot ? asset(integration.screenshot, import.meta
         >
           {t('integrations.homepage')}
           <Icon name="lucide:arrow-up-right" class="size-3" aria-hidden="true" />
-        </a>
-        <a
-          href={site.repository}
-          class="flex items-center gap-1.5 rounded border border-outline px-3 py-1.5 font-mono text-xs text-fg transition-colors hover:border-accent"
-        >
-          <Icon name="simple-icons:github" class="size-3" aria-hidden="true" />
-          {t('nav.github')}
         </a>
       </div>
     </div>

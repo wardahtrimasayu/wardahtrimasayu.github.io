@@ -54,7 +54,7 @@ const id: Record<UiKey, string> = {
   'integrations.pageTitle': '{name}',
   'integrations.zoomIn': 'Full size',
   'integrations.zoomOut': 'Tutup',
-  'integrations.homepage': 'Beranda',
+  'integrations.homepage': 'Repositori GitHub',
 
   'quickstart.eyebrow': 'Fokus Studi',
   'quickstart.title': 'Bidang Keahlian',
@@ -164,7 +164,7 @@ const en = {
   'integrations.pageTitle': '{name}',
   'integrations.zoomIn': 'Full size',
   'integrations.zoomOut': 'Close',
-  'integrations.homepage': 'Home',
+  'integrations.homepage': 'GitHub Repository',
   'quickstart.eyebrow': 'Study Focus',
   'quickstart.title': 'Areas of Expertise',
   'quickstart.descriptionHome': 'Statistical data analysis, Python programming, and Excel-based data processing.',

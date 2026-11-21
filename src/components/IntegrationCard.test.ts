@@ -10,6 +10,7 @@ const integration = {
   locale: 'en' as const,
   name: 'Example Editor',
   description: 'An example.',
+  technologies: ['Python'],
   category: 'editor' as const,
   icon: 'lucide:terminal',
   homepage: 'https://example.com',

@@ -1,75 +1,74 @@
 [
-
   {
-    "slug": "pengolahan-data-excel",
+    "slug": "pengolahan-analisis-data-statistika-excel",
     "locale": "id",
-    "name": "Pengolahan Data & Tabel Microsoft Excel",
-    "description": "Praktik merapikan data terstruktur, penrapan rumus logika, dan ringkasan perhitungan dasar menggunakan Microsoft Excel.",
+    "name": "Pengolahan & Analisis Data Statistika dengan Excel",
+    "description": "Pengolahan data terstruktur, penerapan fungsi logika dan referensi, serta ringkasan statistik deskriptif menggunakan Microsoft Excel.",
+    "technologies": ["Microsoft Excel"],
+    "category": "automation",
+    "icon": "lucide:table",
+    "homepage": "https://github.com/wardahtrimasayu/pengolahan-data-statistika-excel",
+    "featured": true,
+    "body": "Proyek tugas kuliah untuk mengolah data terstruktur, menggunakan fungsi logika dan referensi, serta menyajikan ringkasan statistik deskriptif secara akurat."
+  },
+  {
+    "slug": "esai-analisis-statistika-ekonomi",
+    "locale": "id",
+    "name": "Esai Analisis Statistika & Ekonomi",
+    "description": "Penyusunan argumen berbasis data dan tinjauan analitis mengenai fenomena ekonomi dan statistika secara sistematis.",
+    "technologies": ["Analisis Data", "Penulisan Ilmiah"],
+    "category": "editor",
+    "icon": "lucide:file-text",
+    "homepage": "https://github.com/wardahtrimasayu/kajian-ekonomi-statistika",
+    "featured": true,
+    "body": "Esai akademik yang menyusun argumen berbasis data dan meninjau fenomena ekonomi serta statistika secara sistematis, jelas, dan mudah dipahami."
+  },
+  {
+    "slug": "komputasi-algoritma-pemrograman-python",
+    "locale": "id",
+    "name": "Komputasi & Algoritma Pemrograman dengan Python",
+    "description": "Implementasi logika algoritma pemrograman dasar dan otomatisasi perhitungan matematis/statistika menggunakan bahasa Python.",
+    "technologies": ["Python"],
+    "category": "terminal",
+    "icon": "lucide:code",
+    "homepage": "https://github.com/wardahtrimasayu/algoritma-pemrograman-python",
+    "featured": true,
+    "body": "Proyek tugas kuliah yang mengimplementasikan logika algoritma pemrograman dasar dan mengotomatisasi perhitungan matematis serta statistika menggunakan Python."
+  },
+  {
+    "slug": "pengolahan-analisis-data-statistika-excel",
+    "locale": "en",
+    "name": "Statistical Data Processing & Analysis with Excel",
+    "description": "Processing structured data, applying logical and reference functions, and summarizing descriptive statistics using Microsoft Excel.",
+    "technologies": ["Microsoft Excel"],
     "category": "automation",
     "icon": "lucide:table",
     "homepage": "https://github.com",
     "featured": true,
-    "screenshot": "/images/example.svg",
-    "body": "Proyek praktik mengolah data terstruktur menggunakan Microsoft Excel untuk melatih ketelitian, pembersihan data, dan penyajian ringkasan angka yang rapi dan akurat."
+    "body": "A university project for processing structured data, using logical and reference functions, and presenting accurate descriptive statistics summaries."
   },
   {
-    "slug": "komputasi-dasar-python",
-    "locale": "id",
-    "name": "Tugas Komputasi & Logika dasar Python",
-    "description": "Pengenalan Pemrogram Python untuk perhitungan matematis dan konsep statistika deskriptif tahap awal menggunakan Jupyter Notebook:Python.",
-    "category": "terminal",
-    "icon": "lucide:code",
-    "homepage": "https://github.com",
-    "featured": true,
-    "screenshot": "/images/example.svg",
-    "body": "Tugas kuliah yang berfokus pada pemahaman logika dasar Python untuk membantu perhitungan data kuantitatif serta penerapan konsep statistika deskriptif."
-  },
-  {
-    "slug": "esai-analisis-kritis",
-    "locale": "id",
-    "name": "Esai Akademik & Analisis Kritis",
-    "description": "Penulisan esai terstruktur yang melatih kemampuan menyusun argumen logis dan komunikasi analisis secara jelas menggunakan Microsoft Word.",
+    "slug": "esai-analisis-statistika-ekonomi",
+    "locale": "en",
+    "name": "Statistics & Economics Analysis Essay",
+    "description": "Developing data-based arguments and systematic analytical reviews of economic and statistical phenomena.",
+    "technologies": ["Data Analysis", "Academic Writing"],
     "category": "editor",
     "icon": "lucide:file-text",
     "homepage": "https://github.com",
     "featured": true,
-    "screenshot":"/images/example.svg",
-    "body": "Karya tulis akademik yang disusun secara sistematis untuk melatih pol,a pikir kritis, penyusunan argumen berbasis bukti, serta kemampuan menyampaikan gagasan dengan bahasa yang mudah dipahami."
+    "body": "An academic essay that develops data-based arguments and systematically, clearly, and accessibly reviews economic and statistical phenomena."
   },
   {
-    "slug": "pengolahan-data-excel",
+    "slug": "komputasi-algoritma-pemrograman-python",
     "locale": "en",
-    "name": "Data Processing and Microsoft Excel Tables",
-    "description": "Practice cleaning structured data, applying logical formulas, and summarizing basic calculations using Microsoft Excel.",
-    "category": "automation",
-    "icon": "lucide:table",
-    "homepage": "https://github.com",
-    "featured": true,
-    "screenshot": "/images/example.svg",
-    "body": "A practical project for processing structured data using Microsoft Excel to develop accuracy, data cleaning skills, and clear presentation of numerical summaries."
-  },
-  {
-    "slug": "komputasi-dasar-python",
-    "locale": "en",
-    "name": "Basic Python Computing and Logic Exercises",
-    "description": "An introduction to Python for mathematical calculations and introductory concepts in descriptive statistics using Jupyter Notebook.",
+    "name": "Programming Computation & Algorithms with Python",
+    "description": "Implementing basic programming algorithm logic and automating mathematical/statistical calculations using Python.",
+    "technologies": ["Python"],
     "category": "terminal",
     "icon": "lucide:code",
     "homepage": "https://github.com",
     "featured": true,
-    "screenshot": "/images/example.svg",
-    "body": "A university assignment focused on understanding basic Python logic to support quantitative calculations and apply descriptive statistics concepts."
-  },
-  {
-    "slug": "esai-analisis-kritis",
-    "locale": "en",
-    "name": "Academic Essays and Critical Analysis",
-    "description": "Structured academic writing that develops logical arguments and clear analytical communication using Microsoft Word.",
-    "category": "editor",
-    "icon": "lucide:file-text",
-    "homepage": "https://github.com",
-    "featured": true,
-    "screenshot": "/images/example.svg",
-    "body": "An academic paper organized systematically to develop critical thinking, evidence-based argumentation, and the ability to communicate ideas clearly."
+    "body": "A university project that implements basic programming algorithm logic and automates mathematical and statistical calculations using Python."
   }
 ]

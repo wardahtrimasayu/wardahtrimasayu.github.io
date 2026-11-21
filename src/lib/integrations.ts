@@ -10,6 +10,7 @@ const entry = z.object({
   locale: z.enum(['id', 'en']),
   name: z.string().min(1),
   description: z.string().min(1),
+  technologies: z.array(z.string().min(1)).default([]),
   category: z.enum(['editor', 'terminal', 'automation']),
   icon: z.string().min(1),
   homepage: link,

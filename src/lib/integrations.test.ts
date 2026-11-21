@@ -6,6 +6,7 @@ const entry = {
   locale: 'en',
   name: 'Editor',
   description: 'Example integration',
+  technologies: ['Python'],
   category: 'editor',
   icon: 'lucide:terminal',
   homepage: 'https://example.com',

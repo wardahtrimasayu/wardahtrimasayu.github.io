@@ -28,6 +28,7 @@ it('hides featured content when no items are featured', async () => {
       locale: 'en',
       name: 'Editor',
       description: 'Example',
+      technologies: ['Python'],
       category: 'editor',
       icon: 'lucide:terminal',
       homepage: 'https://example.com',
