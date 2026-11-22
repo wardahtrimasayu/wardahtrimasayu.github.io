@@ -38,5 +38,45 @@
     "category": "Data Computing",
     "summary": "A practical guide to formulas, data validation, and PivotTables for producing accurate data summaries efficiently.",
     "body": "## Start with tidy data\n\nEnsure each column has a consistent name and each row represents one observation. Avoid merged cells or multiple headers within the source table.\n\n## Use the right formulas\n\nThe `AVERAGE` function calculates a mean, `STDEV.S` calculates sample standard deviation, and `COUNTIF` counts records that meet specific criteria. Make sure formulas use ranges that can expand with the table.\n\n## Validate and summarize\n\nData validation can limit entries to specific values, such as predefined categories. Once data is clean, PivotTables can quickly summarize values by category.\n\n## Present results clearly\n\nUse charts that fit the main pattern you want to highlight. Include clear titles, units, and data sources so readers can interpret the report easily."
+  },
+  {
+    "slug": "dasar-logika-python",
+    "locale": "id",
+    "title": "Dasar Logika Pemrograman Python untuk Analisis Data",
+    "date": "22 November 2026",
+    "isoDate": "2026-11-22",
+    "category": "Pemrograman",
+    "summary": "Memahami variabel, kondisi, perulangan, dan fungsi sebagai fondasi otomatisasi analisis data menggunakan Python.",
+    "body": "## Variabel dan tipe data\n\nPython menyimpan nilai dalam variabel tanpa perlu deklarasi tipe yang panjang. Tipe utama yang sering digunakan dalam analisis data adalah angka, teks, daftar, dan kamus. Memilih tipe data yang tepat memudahkan operasi dan mengurangi kesalahan.\n\n## Kondisi untuk mengambil keputusan\n\nPercabangan `if`, `elif`, dan `else` digunakan untuk menentukan tindakan berdasarkan suatu kondisi. Misalnya, program dapat mengelompokkan nilai statistik ke dalam kategori lulus atau tidak lulus.\n\n## Perulangan untuk memproses data\n\nPerulangan `for` sangat berguna untuk membaca kumpulan data satu per satu. Perulangan `while` digunakan ketika proses harus berlanjut sampai suatu kondisi tertentu terpenuhi.\n\n## Fungsi untuk kode yang terstruktur\n\nFungsi membungkus logika agar dapat digunakan kembali. Dengan fungsi, perhitungan rata-rata, pembersihan data, atau pembuatan ringkasan dapat ditulis sekali lalu dipanggil berulang.\n\n## Contoh alur sederhana\n\nMula-mulai sediakan daftar nilai, buat fungsi untuk menghitung rata-rata, lalu gunakan kondisi untuk mengelompokkan hasil. Pendekatan bertahap ini membantu memecahkan permasalahan analisis data menjadi bagian yang lebih mudah diuji."
+  },
+  {
+    "slug": "dasar-logika-python",
+    "locale": "en",
+    "title": "Python Programming Logic Fundamentals for Data Analysis",
+    "date": "November 22, 2026",
+    "isoDate": "2026-11-22",
+    "category": "Programming",
+    "summary": "Understanding variables, conditions, loops, and functions as foundations for automating data analysis with Python.",
+    "body": "## Variables and data types\n\nPython stores values in variables without requiring lengthy type declarations. Common types used in data analysis include numbers, strings, lists, and dictionaries. Choosing the right type makes operations simpler and reduces errors.\n\n## Conditions for decision-making\n\nThe `if`, `elif`, and `else` branches determine actions based on a condition. For example, a program can classify statistical scores into pass or fail groups.\n\n## Loops for processing data\n\nA `for` loop is useful for reading a collection of data one item at a time. A `while` loop is used when a process should continue until a specific condition is met.\n\n## Functions for structured code\n\nFunctions package logic so it can be reused. Calculations for averages, data cleaning, or summary generation can be written once and called repeatedly.\n\n## A simple workflow\n\nStart with a list of values, create a function to calculate the average, and use conditions to classify the result. This step-by-step approach breaks data-analysis problems into parts that are easier to test."
+  },
+  {
+    "slug": "pengantar-pemrograman-r",
+    "locale": "id",
+    "title": "Pengenalan Pemrograman R untuk Komputasi Statistika",
+    "date": "22 November 2026",
+    "isoDate": "2026-11-22",
+    "category": "Pemrograman",
+    "summary": "Memahami data frame, fungsi statistik dasar, paket, dan visualisasi sebagai fondasi penggunaan R.",
+    "body": "## R untuk komputasi statistika\n\nR dirancang untuk analisis statistik dan visualisasi data. Lingkungan kerjanya menyediakan fungsi bawaan untuk menghitung ringkasan, menguji hubungan antarvariabel, dan menggambarkan distribusi.\n\n## Memahami data frame\n\nData frame menyimpan data dalam bentuk tabel, dengan kolom sebagai variabel dan baris sebagai observasi. Struktur ini memudahkan analisis karena setiap kolom dapat memiliki tipe yang berbeda.\n\n## Fungsi statistik dasar\n\nFungsi seperti `mean()`, `median()`, `sd()`, dan `summary()` dapat menghitung karakter dasar data. Operator atau fungsi kondisional dapat digunakan untuk menyaring observasi sebelum perhitungan.\n\n## Paket memperluas kemampuan\n\nPaket R dapat diinstal untuk kebutuhan tertentu. Paket pengolahan data membantu merapikan tabel, sementara paket visualisasi dapat membuat grafik yang informatif dan konsisten.\n\n## Alur kerja yang direkomendasikan\n\nPertama, impor data dan periksa strukturnya. Kedua, tangani nilai hilang dan tipe variabel. Ketiga, buat ringkasan statistik. Terakhir, sajikan hasil melalui tabel atau grafik yang mudah ditafsirkan."
+  },
+  {
+    "slug": "pengantar-pemrograman-r",
+    "locale": "en",
+    "title": "Introduction to R Programming for Statistical Computing",
+    "date": "November 22, 2026",
+    "isoDate": "2026-11-22",
+    "category": "Programming",
+    "summary": "Understanding data frames, basic statistical functions, packages, and visualization as foundations for using R.",
+    "body": "## R for statistical computing\n\nR is designed for statistical analysis and data visualization. Its environment provides built-in functions for calculating summaries, testing relationships between variables, and displaying distributions.\n\n## Understanding data frames\n\nA data frame stores data as a table, with columns as variables and rows as observations. This structure makes analysis easier because each column can have a different type.\n\n## Basic statistical functions\n\nFunctions such as `mean()`, `median()`, `sd()`, and `summary()` calculate basic data characteristics. Conditional operators or functions can filter observations before calculations.\n\n## Packages expand functionality\n\nR packages can be installed for specific needs. Data-processing packages help tidy tables, while visualization packages produce informative and consistent charts.\n\n## Recommended workflow\n\nFirst, import the data and inspect its structure. Next, handle missing values and variable types. Then, produce statistical summaries. Finally, present findings through tables or charts that are easy to interpret."
   }
 ]
