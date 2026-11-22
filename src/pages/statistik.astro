@@ -26,7 +26,7 @@ const bahasaTeratas = [
 
     <div class="max-w-3xl space-y-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {ringkasanGithub.map((item) => (
+        {ringkasanGithub.map(item => (
           <div class="p-5 rounded border space-y-1">
             <p class="text-xs text-muted">{item.label}</p>
             <p class="text-2xl font-bold">{item.nilai}</p>
@@ -38,16 +38,14 @@ const bahasaTeratas = [
       <div class="p-6 rounded border space-y-4">
         <h3 class="font-bold text-lg">Distribusi Bahasa & Teknologi di Repositori</h3>
         <div class="space-y-3">
-          {bahasaTeratas.map((lang) => (
+          {bahasaTeratas.map(lang => (
             <div class="space-y-1">
               <div class="flex justify-between text-sm">
                 <span>{lang.nama}</span>
                 <span class="font-bold">{lang.persen}%</span>
               </div>
               <div class="w-full h-3 rounded border overflow-hidden">
-                <div
-                  style={`width: ${lang.persen}%; background-color: #a78bfa; height: 100%;`}
-                />
+                <div style={`width: ${lang.persen}%; background-color: #a78bfa; height: 100%;`} />
               </div>
             </div>
           ))}

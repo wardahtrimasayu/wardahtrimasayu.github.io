@@ -117,8 +117,7 @@ const id: Record<UiKey, string> = {
 
 const en = {
   'meta.title': 'Wardah Tri Masayu Portfolio',
-  'meta.description':
-    'Wardah Tri Masayu portfolio, a Statistics student interested in data analysis and programming.',
+  'meta.description': 'Wardah Tri Masayu portfolio, a Statistics student interested in data analysis and programming.',
   'a11y.skip': 'Skip to content',
   'a11y.home': 'Terminal Noir, home',
   'nav.main': 'Main',

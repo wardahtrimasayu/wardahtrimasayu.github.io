@@ -12,7 +12,9 @@ const { integration } = Astro.props;
 const { t, path } = getI18n(Astro.currentLocale);
 ---
 
-<li data-integration={`${integration.name} ${integration.slug} ${integration.category} ${integration.technologies.join(' ')}`.toLowerCase()}>
+<li
+  data-integration={`${integration.name} ${integration.slug} ${integration.category} ${integration.technologies.join(' ')}`.toLowerCase()}
+>
   <a
     href={path(`/integrations/${integration.slug}`)}
     class="group flex h-full flex-col justify-between gap-6 rounded border border-hairline bg-raised p-5 transition-colors duration-150 hover:border-accent focus-visible:border-accent"
@@ -25,9 +27,7 @@ const { t, path } = getI18n(Astro.currentLocale);
     </span>
     <span class="flex flex-col gap-2">
       <span class="text-sm text-muted">{integration.description}</span>
-      <span class="font-mono text-[11px] text-accent">
-        {integration.technologies.join(' · ')}
-      </span>
+      <span class="font-mono text-[11px] text-accent">{integration.technologies.join(' · ')}</span>
       <span class="font-mono text-[11px] text-faint">{t(`category.${integration.category}` as UiKey)}</span>
     </span>
   </a>

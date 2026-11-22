@@ -40,9 +40,7 @@ const image = integration.screenshot ? asset(integration.screenshot, import.meta
         </h1>
         <p class="max-w-xl text-sm text-muted">{integration.description}</p>
         {integration.technologies.length > 0 && (
-          <p class="font-mono text-xs text-accent">
-            {integration.technologies.join(' · ')}
-          </p>
+          <p class="font-mono text-xs text-accent">{integration.technologies.join(' · ')}</p>
         )}
       </div>
       <div class="flex flex-wrap items-center gap-3">

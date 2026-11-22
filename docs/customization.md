@@ -13,13 +13,13 @@ Navigation `href` values are site paths such as `/docs`. The `key` must exist in
 
 ## Hero and install tabs
 
-Hero title and description are `site.hero.id` and `site.hero.en`. Install tabs are `site.install`. Each item needs
-an `id`, a `label` and a `command`.
+Hero title and description are `site.hero.id` and `site.hero.en`. Install tabs are `site.install`. Each item needs an
+`id`, a `label` and a `command`.
 
 ## Calls to action
 
-`site.ctas.id` and `site.ctas.en` configure the header button, both hero buttons and the bottom CTA box. Each
-action has a `label` and `href`. The box also has `eyebrow`, `title` and `body` text. Use an internal path such as
+`site.ctas.id` and `site.ctas.en` configure the header button, both hero buttons and the bottom CTA box. Each action has
+a `label` and `href`. The box also has `eyebrow`, `title` and `body` text. Use an internal path such as
 `/docs#quickstart` to automatically retain the current language and deployment base, an HTTP(S) URL for an external
 destination, or `repository` to follow `site.repository`. Both languages are required. Unsafe protocols and
 protocol-relative URLs fail configuration validation.
@@ -40,5 +40,5 @@ locales (`theme.noir` and `theme.paper` in `src/i18n/ui.ts`).
 
 ## Routes
 
-The starter portfolio includes home, about, integrations and profile pages in Indonesian and English. Add a
-page route and its navigation entry only when the page is part of your portfolio.
+The starter portfolio includes home, about, integrations and profile pages in Indonesian and English. Add a page route
+and its navigation entry only when the page is part of your portfolio.

@@ -13,5 +13,5 @@ Edit `src/data/integrations.json`. Pertahankan satu entri `id` dan satu entri `e
 
 ## Perintah demo
 
-Tab instalasi membaca `site.install`. Ganti perintah contoh dengan perintah yang benar-benar terdokumentasi untuk
-alat Anda. Perintah tersebut ditampilkan sebagai teks dan tidak dijalankan.
+Tab instalasi membaca `site.install`. Ganti perintah contoh dengan perintah yang benar-benar terdokumentasi untuk alat
+Anda. Perintah tersebut ditampilkan sebagai teks dan tidak dijalankan.
