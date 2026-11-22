@@ -7,7 +7,7 @@ Pengetahuan Alam (FMIPA), Universitas Cenderawasih. Situs ini dibuat sebagai has
 untuk mata kuliah **Algoritma Pemrograman**.
 
 Portofolio ini menampilkan profil, pendidikan, keahlian, proyek atau karya tugas kuliah, catatan akademik, data GitHub,
-visualisasi statistik, kalkulator statistika, serta informasi kontak Wardah. Website disusun dengan minat pada
+visualisasi statistik, kalkulator statistika, serta informasi kontak saya. Website disusun dengan minat pada
 **analisis data**, **pemrograman**, dan **analisis keuangan**.
 
 - Situs: https://github.io
