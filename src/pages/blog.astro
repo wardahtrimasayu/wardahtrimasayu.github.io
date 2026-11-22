@@ -18,7 +18,7 @@ const { path } = getI18n(Astro.currentLocale);
     />
 
     <div class="grid max-w-4xl gap-5 md:grid-cols-2">
-      {artikelBlog.map((item) => (
+      {artikelBlog.map(item => (
         <article class="flex flex-col rounded border border-hairline p-6">
           <div class="flex flex-wrap items-center gap-3 text-xs text-muted">
             <span class="rounded border border-hairline px-2 py-1">{item.category}</span>

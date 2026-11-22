@@ -11,7 +11,11 @@ const { path } = getI18n(Astro.currentLocale);
 
 <Layout title="Blog & Notes" description="Notes and writing about statistics and data analysis">
   <Section>
-    <SectionHeader eyebrow="Writing & Notes" title="Statistics Blog" description="A collection of class notes, statistics concepts, and data-analysis learning experiences." />
+    <SectionHeader
+      eyebrow="Writing & Notes"
+      title="Statistics Blog"
+      description="A collection of class notes, statistics concepts, and data-analysis learning experiences."
+    />
     <div class="grid max-w-4xl gap-5 md:grid-cols-2">
       {articles.map(article => (
         <article class="flex flex-col rounded border border-hairline p-6">
