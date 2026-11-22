@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "statistika-deskriptif",
+    "locale": "id",
+    "title": "Mengenal Statistika Deskriptif dalam Analisis Data",
+    "date": "18 November 2026",
+    "isoDate": "2026-11-18",
+    "category": "Statistika",
+    "summary": "Statistika deskriptif merangkum data mentah menjadi ukuran pemusatan, ukuran penyebaran, dan visualisasi yang mudah dipahami.",
+    "body": "## Mengapa statistika deskriptif penting?\n\nSebelum melakukan pemodelan atau pengujian hipotesis, seorang analis perlu memahami karakter dasar data. Tahap awal ini membantu menemukan nilai ekstrem, kesalahan pencatatan, serta pola distribusi.\n\n## Ukuran pemusatan\n\nRata-rata (mean), nilai tengah (median), dan modus memberikan gambaran nilai yang mewakili sebagian besar data. Median sering lebih informatif apabila data mengandung pencilan yang ekstrem.\n\n## Ukuran penyebaran\n\nVarians dan simpangan baku menunjukkan seberapa jauh data menyebar dari nilai pusat. Rentang, kuartil, serta diagram batang atau box plot dapat digunakan untuk melihat pola penyebaran secara visual.\n\n## Langkah awal yang praktis\n\nGunakan tabel ringkasan untuk memeriksa jumlah data, nilai hilang, rata-rata, median, minimum, dan maksimum. Setelah itu, pilih grafik yang sesuai dengan jenis variabel dan tujuan analisis."
+  },
+  {
+    "slug": "mengolah-data-excel",
+    "locale": "id",
+    "title": "Mengolah Data Terstruktur dengan Microsoft Excel",
+    "date": "20 November 2026",
+    "isoDate": "2026-11-20",
+    "category": "Komputasi Data",
+    "summary": "Panduan praktis menggunakan rumus, validasi data, dan PivotTable untuk menghasilkan ringkasan data yang lebih cepat dan akurat.",
+    "body": "## Mulai dari data yang rapi\n\nPastikan setiap kolom memiliki nama yang konsisten dan setiap baris mewakili satu observasi. Hindari gabungan sel atau judul ganda di dalam tabel sumber.\n\n## Gunakan rumus yang sesuai\n\nFungsi `AVERAGE` membantu menghitung rata-rata, `STDEV.S` menghitung simpangan baku sampel, dan `COUNTIF` menghitung data berdasarkan kriteria tertentu. Pastikan rentang sel tidak berubah saat tabel diperluas.\n\n## Validasi dan ringkasan\n\nData validation dapat membatasi nilai yang masuk, misalnya hanya menerima kategori tertentu. Setelah data bersih, PivotTable dapat digunakan untuk merangkum nilai berdasarkan kategori dengan cepat.\n\n## Sajikan hasil secara jelas\n\nTambahkan grafik yang sesuai untuk menyoroti pola utama. Pastikan judul, satuan, dan sumber data ditulis dengan jelas agar laporan mudah dipahami oleh pembaca."
+  },
+  {
+    "slug": "statistika-deskriptif",
+    "locale": "en",
+    "title": "Understanding Descriptive Statistics in Data Analysis",
+    "date": "November 18, 2026",
+    "isoDate": "2026-11-18",
+    "category": "Statistics",
+    "summary": "Descriptive statistics summarizes raw data through central tendency, dispersion, and clear visual representations.",
+    "body": "## Why descriptive statistics matters\n\nBefore modeling or hypothesis testing, an analyst should understand the basic characteristics of the data. This initial step helps identify outliers, recording errors, and distribution patterns.\n\n## Measures of central tendency\n\nThe mean, median, and mode describe values that represent the center of a dataset. The median is often more informative when the data contains extreme outliers.\n\n## Measures of dispersion\n\nVariance and standard deviation show how far observations spread around the center. The range, quartiles, bar charts, and box plots can display dispersion visually.\n\n## A practical first step\n\nUse a summary table to check record counts, missing values, mean, median, minimum, and maximum. Then choose charts that fit the variable types and analysis objective."
+  },
+  {
+    "slug": "mengolah-data-excel",
+    "locale": "en",
+    "title": "Processing Structured Data with Microsoft Excel",
+    "date": "November 20, 2026",
+    "isoDate": "2026-11-20",
+    "category": "Data Computing",
+    "summary": "A practical guide to formulas, data validation, and PivotTables for producing accurate data summaries efficiently.",
+    "body": "## Start with tidy data\n\nEnsure each column has a consistent name and each row represents one observation. Avoid merged cells or multiple headers within the source table.\n\n## Use the right formulas\n\nThe `AVERAGE` function calculates a mean, `STDEV.S` calculates sample standard deviation, and `COUNTIF` counts records that meet specific criteria. Make sure formulas use ranges that can expand with the table.\n\n## Validate and summarize\n\nData validation can limit entries to specific values, such as predefined categories. Once data is clean, PivotTables can quickly summarize values by category.\n\n## Present results clearly\n\nUse charts that fit the main pattern you want to highlight. Include clear titles, units, and data sources so readers can interpret the report easily."
+  }
+]
